@@ -53,10 +53,22 @@ def parse_public_sheet(url, search_surname):
     except Exception as e:
         print(f"Ошибка: {e}")
         return []
+# Печать данных по курсу
+def printData(results):
+    for result in results:
+        if result['неделя']==weekNumber:
+            print(f"Строка: {result['row']}, Колонка: {result['column']}, Неделя: {result['неделя']}, День недели: {result['день недели']}, Группа: {result['группа']}, Пара: {result['пара']}, Значение: {result['value']}")
 
 # Использование
-results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=744990727#gid=744990727", "Будилов")
+teacherName=input('Введите фамилию преподавателя: ')
 weekNumber=input('Введите номер недели: ')
-for result in results:
-    if result['неделя']==weekNumber:
-        print(f"Строка: {result['row']}, Колонка: {result['column']}, Неделя: {result['неделя']}, День недели: {result['день недели']}, Группа: {result['группа']}, Пара: {result['пара']}, Значение: {result['value']}")
+results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=744990727#gid=744990727", teacherName)
+printData(results)
+results = parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=37242147#gid=37242147", teacherName)
+printData(results)
+results = parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=447907294#gid=447907294", teacherName)
+printData(results)
+results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=394051115#gid=394051115", teacherName)
+printData(results)
+results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=493476051#gid=493476051", teacherName)
+printData(results)
