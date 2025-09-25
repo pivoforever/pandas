@@ -1,6 +1,7 @@
 import pandas as pd
 import requests
 from urllib.parse import urlparse, parse_qs
+from datetime import datetime, timedelta
 
 def parse_public_sheet(url, search_surname):
     # Преобразуем URL в формат для экспорта
@@ -46,13 +47,69 @@ def parse_public_sheet(url, search_surname):
                         'value': row[col]
                     })
             i+=1
-
-        
         return results
         
     except Exception as e:
         print(f"Ошибка: {e}")
         return []
+
+def create_icalendar_file(filename, events_data):
+    """
+    Создает iCalendar файл с событиями
+    """
+    with open(filename, 'w', encoding='utf-8') as file:
+        # Заголовок календаря
+        file.write("BEGIN:VCALENDAR\n")
+        file.write("VERSION:2.0\n")
+        
+        # Записываем каждое событие
+        for i, event in enumerate(events_data, 1):
+            if event['неделя']==weekNumber:
+                startDate=iso_week_to_date(2025,int(event['неделя'])+34, isoWeek[event['день недели'].strip()])
+                startTime=startPair[event['пара']]
+                start=startDate+'T'+startTime
+                finishTime=finishPair[event['пара']]
+                finish=startDate+'T'+finishTime
+                file.write("BEGIN:VEVENT\n")
+                file.write(f"DTSTART;TZID=Asia/Yekaterinburg:{start}\n")
+                file.write(f"DTEND;TZID=Asia/Yekaterinburg:{finish}\n")
+                file.write(f"SUMMARY:{event['value']} + {event['группа']}\n")
+                if 'location' in event:
+                    file.write(f"LOCATION:{event['location']}\n")
+                file.write("END:VEVENT\n")
+        
+        file.write("END:VCALENDAR\n")
+    
+    print(f"Файл {filename} создан успешно!")
+
+def iso_week_to_date(year, week_number, day_of_week=1):
+    """
+    Использует ISO формат (понедельник=1, воскресенье=7)
+    
+    :param year: год
+    :param week_number: номер недели ISO (1-53)
+    :param day_of_week: день недели ISO (1=понедельник, 7=воскресенье)
+    :return: дата в формате ГГГГ-ММ-ДД
+    """
+    # Первый день года
+    first_day = datetime(year, 1, 1)
+    
+    # Если 1 января - пятница, суббота или воскресенье, то это 53 или 52 неделя предыдущего года
+    if first_day.isoweekday() in [5, 6, 7] and week_number == 1:
+        first_day = datetime(year-1, 12, 31)
+        while first_day.isoweekday() != 1:  # Находим понедельник
+            first_day += timedelta(days=1)
+    else:
+        # Находим первый понедельник года
+        while first_day.isoweekday() != 1:
+            first_day += timedelta(days=1)
+    
+    # Вычисляем дату
+    target_date = first_day + timedelta(weeks=week_number-1, days=day_of_week-1)
+    
+    return target_date.strftime("%Y%m%d")
+
+
 # Печать данных по курсу
 def printData(results):
     for result in results:
@@ -60,15 +117,20 @@ def printData(results):
             print(f"Строка: {result['row']}, Колонка: {result['column']}, Неделя: {result['неделя']}, День недели: {result['день недели']}, Группа: {result['группа']}, Пара: {result['пара']}, Значение: {result['value']}")
 
 # Использование
+isoWeek={'Понедельник':1,'Вторник':2,'Среда':3,'Четверг':4,'Пятница':5,'Суббота':6,'Воскресенье':7}
+startPair={'1':'080000','2':'094000','3':'120000','4':'134000','5':'155000','6':'173000'}
+finishPair={'1':'093000','2':'111000','3':'133000','4':'151000','5':'172000','6':'190000'}
 teacherName=input('Введите фамилию преподавателя: ')
 weekNumber=input('Введите номер недели: ')
-results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=744990727#gid=744990727", teacherName)
-printData(results)
-results = parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=37242147#gid=37242147", teacherName)
-printData(results)
-results = parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=447907294#gid=447907294", teacherName)
-printData(results)
-results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=394051115#gid=394051115", teacherName)
-printData(results)
-results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=493476051#gid=493476051", teacherName)
-printData(results)
+results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=744990727#gid=744990727", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=37242147#gid=37242147", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=447907294#gid=447907294", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=394051115#gid=394051115", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=493476051#gid=493476051", teacherName)
+
+""" events = [
+    {
+        'start': '20250924T230000',
+        'end': '20250924T235000', 
+        'title': 'Экспл. лаба ПИ-37 1п',
+        'location': 'Авангард, 311'
+    }
+]
+"""
+create_icalendar_file('myCalendar.ics', results)
