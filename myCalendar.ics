@@ -1,3 +1,163 @@
 BEGIN:VCALENDAR
 VERSION:2.0
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250929T134000
+DTEND;TZID=Asia/Yekaterinburg:20250929T151000
+SUMMARY:ИСП2124 лек. Основы алгоритмизации и программирования Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250929T080000
+DTEND;TZID=Asia/Yekaterinburg:20250929T093000
+SUMMARY:ИСП2224 233 2П Основы алгоритмизации и программирования Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250929T094000
+DTEND;TZID=Asia/Yekaterinburg:20250929T111000
+SUMMARY:ИСП2224 233 1П Основы алгоритмизации и программирования Будилов В.В. / 218 2П Операционные системы и среды Константинова О.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250929T134000
+DTEND;TZID=Asia/Yekaterinburg:20250929T151000
+SUMMARY:ИСП2224 лек. Основы алгоритмизации и программирования Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250929T120000
+DTEND;TZID=Asia/Yekaterinburg:20250929T133000
+SUMMARY:ИСП(с)3223 лек. Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250929T120000
+DTEND;TZID=Asia/Yekaterinburg:20250929T133000
+SUMMARY:ИСП(с)3323 лек. Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251001T080000
+DTEND;TZID=Asia/Yekaterinburg:20251001T093000
+SUMMARY:ИСП(с)3323 233 1П Внедрение информационных систем Будилов В.В. / 2П Управление проектами Григорьева А.П.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251001T094000
+DTEND;TZID=Asia/Yekaterinburg:20251001T111000
+SUMMARY:ИСП(с)3323 233 1П Внедрение информационных систем Будилов В.В. / 2П Моделирование и анализ программного обеспечения Григорьева А.П.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251001T120000
+DTEND;TZID=Asia/Yekaterinburg:20251001T133000
+SUMMARY:ИСП(с)3323 1П Управление проектами Григорьева А.П. / 233 2П Инженерно-техническая поддержка сопровождения Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250930T080000
+DTEND;TZID=Asia/Yekaterinburg:20250930T093000
+SUMMARY:ИСП(с)3423 233 2П Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250930T094000
+DTEND;TZID=Asia/Yekaterinburg:20250930T111000
+SUMMARY:ИСП(с)3423 233 2П Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251003T120000
+DTEND;TZID=Asia/Yekaterinburg:20251003T133000
+SUMMARY:ИСП(с)3423 лек. Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251003T134000
+DTEND;TZID=Asia/Yekaterinburg:20251003T151000
+SUMMARY:ИСП(с)3423 лек. Инженерно-техническая поддержка сопровождения Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251004T080000
+DTEND;TZID=Asia/Yekaterinburg:20251004T093000
+SUMMARY:ИСП(с)3423 233 2П Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251004T094000
+DTEND;TZID=Asia/Yekaterinburg:20251004T111000
+SUMMARY:ИСП(с)3423 233 2П Инженерно-техническая поддержка сопровождения Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251003T120000
+DTEND;TZID=Asia/Yekaterinburg:20251003T133000
+SUMMARY:ИСП(с)3623 лек. Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251003T134000
+DTEND;TZID=Asia/Yekaterinburg:20251003T151000
+SUMMARY:ИСП(с)3623 лек. Инженерно-техническая поддержка сопровождения Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251003T120000
+DTEND;TZID=Asia/Yekaterinburg:20251003T133000
+SUMMARY:ИСП(с)3723 лек. Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251003T134000
+DTEND;TZID=Asia/Yekaterinburg:20251003T151000
+SUMMARY:ИСП(с)3723 лек. Инженерно-техническая поддержка сопровождения Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251004T120000
+DTEND;TZID=Asia/Yekaterinburg:20251004T133000
+SUMMARY:ИСП(с)3723 233 1П Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251004T134000
+DTEND;TZID=Asia/Yekaterinburg:20251004T151000
+SUMMARY:ИСП(с)3723 233 1П Внедрение информационных систем Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250929T155000
+DTEND;TZID=Asia/Yekaterinburg:20250929T172000
+SUMMARY:ИСП(с)4222 лек. Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250930T155000
+DTEND;TZID=Asia/Yekaterinburg:20250930T172000
+SUMMARY:ИСП(с)4222 233 пз. Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250930T173000
+DTEND;TZID=Asia/Yekaterinburg:20250930T190000
+SUMMARY:ИСП(с)4222 233 1П Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251002T134000
+DTEND;TZID=Asia/Yekaterinburg:20251002T151000
+SUMMARY:ИСП(с)4222 233 2П Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250929T155000
+DTEND;TZID=Asia/Yekaterinburg:20250929T172000
+SUMMARY:ИСП(с)4422 лек. Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250930T120000
+DTEND;TZID=Asia/Yekaterinburg:20250930T133000
+SUMMARY:ИСП(с)4422 233 1П Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250930T134000
+DTEND;TZID=Asia/Yekaterinburg:20250930T151000
+SUMMARY:ИСП(с)4422 233 пз. Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251002T155000
+DTEND;TZID=Asia/Yekaterinburg:20251002T172000
+SUMMARY:ИСП(с)4422 107Б 1П Проектирование и дизайн информационных систем Кирилова Д.Ф. / 233 2П Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20250929T155000
+DTEND;TZID=Asia/Yekaterinburg:20250929T172000
+SUMMARY:ИСП(с)4522 лек. Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251002T094000
+DTEND;TZID=Asia/Yekaterinburg:20251002T111000
+SUMMARY:ИСП(с)4522 233 1П Управление и автоматизация баз данных Будилов В.В. / 107Б 2П Разработка кода информационных систем Кирилова Д.Ф.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20251002T120000
+DTEND;TZID=Asia/Yekaterinburg:20251002T133000
+SUMMARY:ИСП(с)4522 107Б 1П Разработка кода информационных систем Кирилова Д.Ф. / 233 2П Управление и автоматизация баз данных Будилов В.В.
+END:VEVENT
 END:VCALENDAR

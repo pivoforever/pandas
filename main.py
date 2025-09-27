@@ -73,7 +73,7 @@ def create_icalendar_file(filename, events_data):
                 file.write("BEGIN:VEVENT\n")
                 file.write(f"DTSTART;TZID=Asia/Yekaterinburg:{start}\n")
                 file.write(f"DTEND;TZID=Asia/Yekaterinburg:{finish}\n")
-                file.write(f"SUMMARY:{event['value']} + {event['группа']}\n")
+                file.write(f"SUMMARY:{event['группа']} {event['value']}\n")
                 if 'location' in event:
                     file.write(f"LOCATION:{event['location']}\n")
                 file.write("END:VEVENT\n")
