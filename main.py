@@ -64,7 +64,8 @@ def create_icalendar_file(filename, events_data):
         
         # Записываем каждое событие
         for i, event in enumerate(events_data, 1):
-            if event['неделя']==weekNumber:
+            week=int(event['неделя'])
+            if week>=weekNumber and week<=weekNumberEnd:
                 startDate=iso_week_to_date(2025,int(event['неделя'])+34, isoWeek[event['день недели'].strip()])
                 startTime=startPair[event['пара']]
                 start=startDate+'T'+startTime
@@ -73,7 +74,7 @@ def create_icalendar_file(filename, events_data):
                 file.write("BEGIN:VEVENT\n")
                 file.write(f"DTSTART;TZID=Asia/Yekaterinburg:{start}\n")
                 file.write(f"DTEND;TZID=Asia/Yekaterinburg:{finish}\n")
-                file.write(f"SUMMARY:{event['value']} + {event['группа']}\n")
+                file.write(f"SUMMARY:{event['группа']} {event['value']}\n")
                 if 'location' in event:
                     file.write(f"LOCATION:{event['location']}\n")
                 file.write("END:VEVENT\n")
@@ -121,7 +122,8 @@ isoWeek={'Понедельник':1,'Вторник':2,'Среда':3,'Четв�
 startPair={'1':'080000','2':'094000','3':'120000','4':'134000','5':'155000','6':'173000'}
 finishPair={'1':'093000','2':'111000','3':'133000','4':'151000','5':'172000','6':'190000'}
 teacherName=input('Введите фамилию преподавателя: ')
-weekNumber=input('Введите номер недели: ')
+weekNumber=int(input('Введите с какой недели: '))
+weekNumberEnd=int(input('Введите по какую неделю: '))
 results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=744990727#gid=744990727", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=37242147#gid=37242147", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=447907294#gid=447907294", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=394051115#gid=394051115", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=493476051#gid=493476051", teacherName)
 
 """ events = [
