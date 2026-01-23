@@ -56,8 +56,11 @@ def create_icalendar_file(filename, events_data):
     """
     Создает iCalendar файл с событиями, переписывая предыдущие данные в файл iCalendar_old
     """
-    os.remove('myCalendar_old.ics')
-    os.rename(filename, 'myCalendar_old.ics')
+# Заменяем эти две строки:
+    if os.path.exists('myCalendar.ics'):
+        if os.path.exists('myCalendar_old.ics'):
+            os.remove('myCalendar_old.ics')
+        os.rename('myCalendar.ics', 'myCalendar_old.ics')
     with open(filename, 'w', encoding='utf-8') as file:
         # Заголовок календаря
         file.write("BEGIN:VCALENDAR\n")
