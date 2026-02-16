@@ -1,0 +1,113 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260112T155000
+DTEND;TZID=Asia/Yekaterinburg:20260112T172000
+SUMMARY:ИСП-2124 7-304 лек. Основы алгоритмизации и программирования Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260113T134000
+DTEND;TZID=Asia/Yekaterinburg:20260113T151000
+SUMMARY:ИСП-2124 315 лек. Основы алгоритмизации и программирования Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260112T155000
+DTEND;TZID=Asia/Yekaterinburg:20260112T172000
+SUMMARY:ИСП-2224 7-304 лек. Основы алгоритмизации и программирования Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260113T134000
+DTEND;TZID=Asia/Yekaterinburg:20260113T151000
+SUMMARY:ИСП-2224 315 лек. Основы алгоритмизации и программирования Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260116T094000
+DTEND;TZID=Asia/Yekaterinburg:20260116T111000
+SUMMARY:ИСП-(с)3223 7-301 лек. Инженерно-техническая поддержка сопровождения
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260116T120000
+DTEND;TZID=Asia/Yekaterinburg:20260116T133000
+SUMMARY:ИСП-(с)3223 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260116T134000
+DTEND;TZID=Asia/Yekaterinburg:20260116T151000
+SUMMARY:ИСП-(с)3223 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260116T094000
+DTEND;TZID=Asia/Yekaterinburg:20260116T111000
+SUMMARY:ИСП-(с)3323 7-301 лек. Инженерно-техническая поддержка сопровождения
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260116T120000
+DTEND;TZID=Asia/Yekaterinburg:20260116T133000
+SUMMARY:ИСП-(с)3323 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260116T134000
+DTEND;TZID=Asia/Yekaterinburg:20260116T151000
+SUMMARY:ИСП-(с)3323 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260117T094000
+DTEND;TZID=Asia/Yekaterinburg:20260117T111000
+SUMMARY:ИСП-(с)3423 7-301 лек. Инженерно-техническая поддержка сопровождения
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260117T120000
+DTEND;TZID=Asia/Yekaterinburg:20260117T133000
+SUMMARY:ИСП-(с)3423 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260117T134000
+DTEND;TZID=Asia/Yekaterinburg:20260117T151000
+SUMMARY:ИСП-(с)3423 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260117T094000
+DTEND;TZID=Asia/Yekaterinburg:20260117T111000
+SUMMARY:ИСП-(с)3623 7-301 лек. Инженерно-техническая поддержка сопровождения
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260117T120000
+DTEND;TZID=Asia/Yekaterinburg:20260117T133000
+SUMMARY:ИСП-(с)3623 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260117T134000
+DTEND;TZID=Asia/Yekaterinburg:20260117T151000
+SUMMARY:ИСП-(с)3623 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260117T094000
+DTEND;TZID=Asia/Yekaterinburg:20260117T111000
+SUMMARY:ИСП-(с)3723 7-301 лек. Инженерно-техническая поддержка сопровождения
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260117T120000
+DTEND;TZID=Asia/Yekaterinburg:20260117T133000
+SUMMARY:ИСП-(с)3723 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Yekaterinburg:20260117T134000
+DTEND;TZID=Asia/Yekaterinburg:20260117T151000
+SUMMARY:ИСП-(с)3723 7-301 лек. Интеллектуальные системы и технологии
+ Будилов В.В.
+END:VEVENT
+END:VCALENDAR
