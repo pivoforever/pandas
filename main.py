@@ -123,14 +123,8 @@ finishPair={'1':'093000','2':'111000','3':'133000','4':'151000','5':'172000','6'
 teacherName=input('Введите фамилию преподавателя: ')
 weekNumber=input('Введите номер недели: ')
 results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=744990727#gid=744990727", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=37242147#gid=37242147", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=447907294#gid=447907294", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=394051115#gid=394051115", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=493476051#gid=493476051", teacherName)
+if teacherName.isnumeric():
+    results+=parse_public_sheet("https://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=98116459#gid=98116459", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=31778361#gid=31778361", teacherName) +    parse_public_sheet("hhttps://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=1353187888#gid=1353187888", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/1Ojaq4ZG4qxRRxqPV9qXglT9zM0JIM079/edit?gid=315466639#gid=315466639", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=1439101807#gid=1439101807", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=1100807409#gid=1100807409", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=22549204#gid=22549204", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=1247167705#gid=1247167705", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=354914518#gid=354914518", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=980317130#gid=980317130", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/1rbUMw-YmpSBfNQPW5L6-C80BB9vvxx7l/edit?gid=1901193065#gid=1901193065", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=182080691#gid=182080691", teacherName) +    parse_public_sheet("https://docs.google.com/spreadsheets/d/16ojS9myOnEOs8OFvJgjGglho-7aRMcV5/edit?gid=2033152424#gid=2033152424", teacherName)
 
-""" events = [
-    {
-        'start': '20250924T230000',
-        'end': '20250924T235000', 
-        'title': 'Экспл. лаба ПИ-37 1п',
-        'location': 'Авангард, 311'
-    }
-]
-"""
+
 create_icalendar_file('myCalendar.ics', results)
