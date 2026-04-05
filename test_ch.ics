@@ -1,9 +1,8 @@
 BEGIN:VCALENDAR
 VERSION:2.0  
 BEGIN:VEVENT
-DTSTART;TZID=Asia/Yekaterinburg:20250925T140000Z
-DTEND;TZID=Asia/Yekaterinburg:20250925T153000Z
-LOCATION:233
-SUMMARY:Тест записи
+DTSTART;TZID=Asia/Yekaterinburg:20260513T120000
+DTEND;TZID=Asia/Yekaterinburg:20260513T133000
+SUMMARY:ИСП-2124 238 2П Системы автоматизированного проектирования/233 1П Основы алгоритмизации и программирования Будилов В.В. 
 END:VEVENT
 END:VCALENDAR

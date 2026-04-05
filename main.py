@@ -37,6 +37,14 @@ def parse_public_sheet(url, search_surname):
                     dayOfWeek=idx
                     while df_filled['День недели'][dayOfWeek]=='':
                         dayOfWeek-=1
+                    valueEdited=row[col]
+                    valueEdited=valueEdited.replace('\n', '')
+                    if '/' in valueEdited:
+                        parts = valueEdited.split('/')
+                        for part in parts:
+                            if search_surname in part:
+                                valueEdited = part.strip()
+                                break
                     results.append({
                         'row': idx + 2,  # +2 потому что pandas индексирует с 0, а заголовок - первая строка
                         'column': col,
@@ -44,7 +52,7 @@ def parse_public_sheet(url, search_surname):
                         'день недели': df_filled['День недели'][dayOfWeek],
                         'пара': str(int(df_filled['№ пары'][idx])),
                         'группа': groupName,
-                        'value': row[col]
+                        'value': valueEdited
                     })
         return results
         
