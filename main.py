@@ -35,7 +35,11 @@ def parse_public_sheet(url, search_surname):
             if not matches.empty:
                 for idx, row in matches.iterrows():
                     dayOfWeek=idx
-                    while df_filled['День недели'][dayOfWeek]=='':
+                    if 'День недели' in df_filled.columns:
+                        findDay='День недели'
+                    else:
+                        findDay='57/58/57/58'
+                    while df_filled[findDay][dayOfWeek]=='':
                         dayOfWeek-=1
                     valueEdited=row[col]
                     valueEdited=valueEdited.replace('\n', '')
@@ -137,6 +141,14 @@ teacherName=input('Введите фамилию преподавателя: ')
 weekNumber=int(input('Введите с какой недели: '))
 weekNumberEnd=int(input('Введите по какую неделю: '))
 sheet_names = {
+    '1346498076': 'ИСП-1125',
+    '991950376': 'ИСП-1225',
+    '1417260862': 'ИСП-1325',
+    '1734920814': 'ИСП-1425',
+    '964921893': 'ИСП-1525',
+    '1273652340': 'ИСП-1625',
+    '545203822': 'ИСП-1725',
+    '1101484531': 'ИСП-1825',
     '511325013': 'ИСП-2124',
     '744990727': 'ИСП-2224',
     '447907294': 'ИСП-(с)3223',
@@ -146,7 +158,7 @@ sheet_names = {
     '1361637083': 'ИСП-(с)3723'
 }
 
-results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1eLs6xDw60hpKogZY8mhR5wvnpV1hB5J_/edit?gid=511325013#gid=511325013", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/1eLs6xDw60hpKogZY8mhR5wvnpV1hB5J_/edit?gid=744990727#gid=744990727", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=447907294#gid=447907294", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=1405565128#gid=1405565128", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=1921378572#gid=1921378572", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=1346498076#gid=1346498076", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=1361637083#gid=1361637083", teacherName)
+results = parse_public_sheet("https://docs.google.com/spreadsheets/d/1eLs6xDw60hpKogZY8mhR5wvnpV1hB5J_/edit?gid=511325013#gid=511325013", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/1eLs6xDw60hpKogZY8mhR5wvnpV1hB5J_/edit?gid=744990727#gid=744990727", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=447907294#gid=447907294", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=1405565128#gid=1405565128", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=1921378572#gid=1921378572", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=1346498076#gid=1346498076", teacherName) + parse_public_sheet("https://docs.google.com/spreadsheets/d/1UFT2opdL3Xv5eIc6_vDF2eUoC4gtnl5-/edit?gid=1361637083#gid=1361637083", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/17ICYlOQsiNCFTwDkIfC4T5e-0878_5Sn/edit?gid=1662898756#gid=1662898756", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/17ICYlOQsiNCFTwDkIfC4T5e-0878_5Sn/edit?gid=991950376#gid=991950376", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/17ICYlOQsiNCFTwDkIfC4T5e-0878_5Sn/edit?gid=1417260862#gid=1417260862", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/17ICYlOQsiNCFTwDkIfC4T5e-0878_5Sn/edit?gid=1734920814#gid=1734920814", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/17ICYlOQsiNCFTwDkIfC4T5e-0878_5Sn/edit?gid=964921893#gid=964921893", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/17ICYlOQsiNCFTwDkIfC4T5e-0878_5Sn/edit?gid=1273652340#gid=1273652340", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/17ICYlOQsiNCFTwDkIfC4T5e-0878_5Sn/edit?gid=545203822#gid=545203822", teacherName)+ parse_public_sheet("https://docs.google.com/spreadsheets/d/17ICYlOQsiNCFTwDkIfC4T5e-0878_5Sn/edit?gid=1101484531#gid=1101484531", teacherName)
 
 """ events = [
     {
