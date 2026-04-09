@@ -26,7 +26,11 @@ def parse_public_sheet(url, search_surname):
         df = pd.read_csv(url)
         df_filled = df.fillna('')
         gid = url.split('gid=')[-1] if 'gid=' in url else '0'
-        
+        if 'День недели' in df_filled.columns:
+            findDay='День недели'
+        else:
+            findDay='57/58/57/58'
+
         # Ищем фамилию
         results = []
         groupName=sheet_names.get(gid, 'Неизвестный лист')
@@ -35,10 +39,6 @@ def parse_public_sheet(url, search_surname):
             if not matches.empty:
                 for idx, row in matches.iterrows():
                     dayOfWeek=idx
-                    if 'День недели' in df_filled.columns:
-                        findDay='День недели'
-                    else:
-                        findDay='57/58/57/58'
                     while df_filled[findDay][dayOfWeek]=='':
                         dayOfWeek-=1
                     valueEdited=row[col]
@@ -53,7 +53,7 @@ def parse_public_sheet(url, search_surname):
                         'row': idx + 2,  # +2 потому что pandas индексирует с 0, а заголовок - первая строка
                         'column': col,
                         'неделя': df_filled[col][0],
-                        'день недели': df_filled['День недели'][dayOfWeek],
+                        'день недели': df_filled[findDay][dayOfWeek],
                         'пара': str(int(df_filled['№ пары'][idx])),
                         'группа': groupName,
                         'value': valueEdited
